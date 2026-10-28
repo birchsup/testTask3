@@ -1,0 +1,11 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+playwright-report-api/
+blob-report/
+playwright/.cache/
+output/
+package-lock.json
+*.env
+.env*

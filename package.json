@@ -1,0 +1,54 @@
+{
+  "name": "testtask3",
+  "version": "1.0.0",
+  "description": "API autotests on Playwright",
+  "scripts": {
+    "test": "playwright test --config=playwright.config.api.ts",
+    "test:contract": "playwright test --config=playwright.config.api.ts --project=contract",
+    "test:e2e": "playwright test --config=playwright.config.api.ts --project=e2e",
+    "report": "playwright show-report playwright-report-api",
+    "lint": "eslint \"**/*.{ts,js,mjs}\"",
+    "lint:fix": "eslint \"**/*.{ts,js,mjs}\" --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "checkError": "tsc --noEmit",
+    "check": "npm run checkError && npm run lint && npm run format:check",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birchsup/testTask3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/birchsup/testTask3/issues"
+  },
+  "homepage": "https://github.com/birchsup/testTask3#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.20.5",
+    "dotenv": "^18.0.9",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.1",
+    "globals": "^17.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1"
+  },
+  "lint-staged": {
+    "*.{ts,js,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

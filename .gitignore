@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Playwright output
+/test-results/
+/playwright-report/
+/playwright-report-api/
+/blob-report/
+/playwright/.cache/
+/output/
+
+# Env & secrets (committed env files hold no secrets; local overrides stay out)
+.env
+.env.*
+!.env.prod
+
+# IDE / OS
+/.idea/
+.vscode/
+.DS_Store
+
+# Tooling
+/.claude/
+/.playwright-mcp/
+/.husky/_/
